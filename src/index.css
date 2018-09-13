@@ -4,20 +4,20 @@ body {
   	font-family: sans-serif;
 }
 .no-weather {
-	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/seattle.jpg) no-repeat center center fixed !important;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./assets/images/seattle.jpg) no-repeat center center fixed !important;
 	background-size: cover !important;
 
 }
 .partly-cloudy-day {
-	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/partly-cloudy-day.jpg) no-repeat center center fixed !important;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./assets/images/partly-cloudy-day.jpg) no-repeat center center fixed !important;
 	background-size: cover !important;
 }
 .cloudy {
-	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/cloudy.jpg) no-repeat center center fixed !important;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./assets/images/cloudy.jpg) no-repeat center center fixed !important;
 	background-size: cover !important;
 }
 .partly-cloudy-night {
-	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/partly-cloudy-night.jpg) no-repeat center center fixed !important;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./assets/images/partly-cloudy-night.jpg) no-repeat center center fixed !important;
 	background-size: cover !important;
 }
 .clear-day {

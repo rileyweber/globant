@@ -22,7 +22,6 @@ class Page extends React.Component {
 		axios
 		.post(`http://darksky.rileypweber.com?endpoint=forecast&lat=${this.state.lat}&lon=${this.state.lon}`)
 		.then(resp => {
-			// resp.data.currently.icon = 'wind';
 			this.setState({data: resp.data});
 		})
 		.catch(err => {
