@@ -1,11 +1,56 @@
-/*@import url('https://fonts.googleapis.com/css?family=Roboto:300');*/
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/seattle.jpg) no-repeat center center fixed !important;
-  background-size: cover !important;
+  	margin: 0;
+  	padding: 0;
+  	font-family: sans-serif;
+}
+.no-weather {
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/seattle.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+
+}
+.partly-cloudy-day {
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/partly-cloudy-day.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.cloudy {
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/cloudy.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.partly-cloudy-night {
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/images/partly-cloudy-night.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.clear-day {
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./assets/images/clear-day.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.clear-night {
+	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(./assets/images/clear-night.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.rain {
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./assets/images/rain.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.snow {
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./assets/images/snow.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.sleet {
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./assets/images/sleet.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.wind {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./assets/images/wind.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+.fog {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./assets/images/fog.jpg) no-repeat center center fixed !important;
+	background-size: cover !important;
+}
+
+.segment {
+	background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .init-loader {
@@ -14,30 +59,4 @@ body {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	color: white !important;
-}
-
-.main-body {
-	/*background-color:rgba(0,0,0,0.3);*/
-	width: 90%;
-	max-width: 900px;
-	text-align: center;
-	margin: 0 auto;
-}
-
-.title {
-	/*font-family: Roboto;*/
-	text-align: left;
-	font-size: 20px;
-	/*padding: 10px 17px;*/
-	color: white;
-	/*background-color: rgba(0,0,0,0.6);*/
-	margin: 20px 0;
-	letter-spacing: 1px;
-}
-
-.current-weather {
-	/*color: white;*/
-	text-align: left;
-	/*padding: 5px 15px;*/
-	/*background-color: rgba(0,0,0,0.5);*/
 }

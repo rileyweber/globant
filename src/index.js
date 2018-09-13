@@ -22,10 +22,8 @@ class Page extends React.Component {
 		axios
 		.post(`http://darksky.rileypweber.com?endpoint=forecast&lat=${this.state.lat}&lon=${this.state.lon}`)
 		.then(resp => {
-			const data    = resp.data;
-			const current = data.currently;
-
-			this.setState({data: data});
+			// resp.data.currently.icon = 'wind';
+			this.setState({data: resp.data});
 		})
 		.catch(err => {
 			console.log(err);
@@ -35,6 +33,8 @@ class Page extends React.Component {
 	render() {
 
 		if (!this.state.data) {
+			document.body.classList.add('no-weather');
+
 			return (
 				<Container>
 					<Location />
@@ -43,6 +43,9 @@ class Page extends React.Component {
 			);
 		}
 		else {
+			document.body.classList.remove('no-weather');
+			document.body.classList.add(this.state.data.currently.icon);
+
 			return (
 				<Container>
 					<Location />
@@ -53,35 +56,6 @@ class Page extends React.Component {
 			);
 		}
 	}
-}
-
-
-function PageOld() {
-	const lat = 47.6062;
-	const lon = -122.3321;
-	
-	axios
-		.post(`http://darksky.rileypweber.com?endpoint=forecast&lat=${lat}&lon=${lon}`)
-		.then(resp => {
-			const data    = resp.data;
-			const current = data.currently;
-			
-			console.log(data);
-		})
-		.catch(err => {
-			console.log(err);
-		});
-
-	return (
-		<Container>
-			<Location />
-			<Loader className='init-loader' active />
-		</Container>
-		/*<div className='main-body'>*/
-			/*<Location />*/
-			/*<CurrentWeather />*/
-		/*</div>*/
-	);
 }
 
 ReactDOM.render(<Page />, document.getElementById('root'));
