@@ -1,0 +1,13 @@
+version: 0.0
+
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/weather
+
+hooks:
+  AfterInstall:
+    - location: install/after.sh
+      timeout: 600
+      runas: root
