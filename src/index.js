@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import moment from 'moment';
+import { Container, Loader, Divider } from 'semantic-ui-react';
 import './index.css';
 import 'semantic-ui-css/semantic.min.css';
-
-import { Container, Loader, Divider } from 'semantic-ui-react';
 
 import Location from './components/location';
 import CurrentWeather from './components/current';

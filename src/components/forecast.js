@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Card } from 'semantic-ui-react';
+import { Grid, Segment } from 'semantic-ui-react';
 import moment from 'moment';
 import Icon from './icon';
 
