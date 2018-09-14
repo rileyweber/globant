@@ -29,7 +29,7 @@ function CurrentWeather(data) {
 
 							<Grid.Column width={13}>
 								<p style={{color:'gray'}}>Currently <span style={{color:'black'}}>{current.summary}</span> with a temperature of <span style={{color:'black'}}>{Math.round(current.temperature)} &#176;F</span></p>
-								<p style={{fontSize: '12px'}}><span style={{color:'gray'}}>Humidity</span> {current.humidity*100}%</p>
+								<p style={{fontSize: '12px'}}><span style={{color:'gray'}}>Humidity</span> {Math.round(current.humidity*100)}%</p>
 								<p style={{fontSize: '11px'}}>{moment.unix(current.time).format('dddd MMM Do h:mm a')}</p>
 							</Grid.Column>
 						</Grid>
