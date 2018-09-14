@@ -17,7 +17,7 @@ function CurrentWeather(data) {
 					As of {moment.unix(current.time).format('h:mm a')}
 				</div>
 				<div style={{textAlign: 'right'}}>
-					<small><PoweredBy /></small>
+					<PoweredBy />
 				</div>
 			</Segment>
 			
