@@ -10,34 +10,45 @@ function CurrentWeather(data) {
 	return (
 		<div className='current-weather'>
 			<Segment>
-				<h4>{moment.unix(current.time).format('dddd MMM Do')} in Seattle</h4>
-				<div style={{fontSize: '12px', color: 'gray'}}>{moment.unix(current.time).format('h:mm a')}</div>
+				<h4>Current Weather Conditions in Seattle</h4>
+				<div style={{fontSize: '12px', color: 'gray'}}>
+					As of {moment.unix(current.time).format('h:mm a')}
+				</div>
 			</Segment>
 			
 			<Grid>
-				<Grid.Column width={12}>
+				<Grid.Column width={11}>
 
 					<Segment>
 						<Grid stackable>
 							<Grid.Column width={3} style={{textAlign: 'center'}}> 
 								<div style={{fontSize: '50px'}}><Icon icon_name={icon} /></div>
 								<div style={{marginTop: '5px'}}>
-									<div style={{fontSize: '11px'}}>Feels like</div>
+									<div style={{fontSize: '11px'}}>
+										Feels like
+									</div>
 									{Math.round(current.apparentTemperature)} &#176;F
 								</div>
 							</Grid.Column>
 
 							<Grid.Column width={13}>
-								<p style={{color:'gray'}}>Currently <span style={{color:'black'}}>{current.summary}</span> with a temperature of <span style={{color:'black'}}>{Math.round(current.temperature)} &#176;F</span></p>
-								<p style={{fontSize: '12px'}}><span style={{color:'gray'}}>Humidity</span> {Math.round(current.humidity*100)}%</p>
-								<p style={{fontSize: '11px'}}>{moment.unix(current.time).format('dddd MMM Do h:mm a')}</p>
+								<p style={{color:'gray'}}>
+									Currently <span style={{color:'black'}}>{current.summary}</span> with a 
+									temperature of <span style={{color:'black'}}>{Math.round(current.temperature)} &#176;F</span>
+								</p>
+								<p style={{color:'gray'}}>
+									About {Math.round(current.cloudCover * 100)}% of the sky is clouds with a UV Index of {current.uvIndex}.
+								</p>
+								<p style={{fontSize: '12px'}}>
+									<span style={{color:'gray'}}>Humidity</span> {Math.round(current.humidity*100)}%
+								</p>
 							</Grid.Column>
 						</Grid>
 					</Segment>
 				
 				</Grid.Column>
 
-				<Grid.Column width={4} style={{textAlign: 'center'}}>
+				<Grid.Column width={5} style={{textAlign: 'center'}}>
 					<Segment>
 						<div>
 							<small style={{color:'gray'}}>Wind Speed</small>

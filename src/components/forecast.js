@@ -26,8 +26,13 @@ function Forecast(data) {
 							return (
 								<Grid.Column key={index}>
 									<h5>{now.format('ddd')} <Icon icon_name={weather.icon.replace(/-/g, '_')} /></h5>
-									<div>{weather.summary}</div>
-									<div style={{marginTop: '5px'}}>High {Math.round(weather.apparentTemperatureHigh)}&#176;. Low {Math.round(weather.apparentTemperatureLow)}&#176;.</div>
+									<div>
+										{weather.summary}
+									</div>
+									<div style={{marginTop: '5px'}}>
+										High {Math.round(weather.apparentTemperatureHigh)}&#176;. 
+										Low {Math.round(weather.apparentTemperatureLow)}&#176;.
+									</div>
 								</Grid.Column>
 							);
 						}
