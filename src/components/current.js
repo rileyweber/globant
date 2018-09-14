@@ -3,6 +3,8 @@ import { Grid, Segment, Divider } from 'semantic-ui-react';
 import Icon from './icon';
 import moment from 'moment';
 
+const PoweredBy = () => <a className='powered-by' href='https://darksky.net/poweredby/' target='_blank'>Powered by Dark Sky</a>;
+
 function CurrentWeather(data) {
 	const current = data.data.currently;
 	const icon    = current.icon.replace(/-/g, '_');
@@ -13,6 +15,9 @@ function CurrentWeather(data) {
 				<h4>Current Weather Conditions in Seattle</h4>
 				<div style={{fontSize: '12px', color: 'gray'}}>
 					As of {moment.unix(current.time).format('h:mm a')}
+				</div>
+				<div style={{textAlign: 'right'}}>
+					<small><PoweredBy /></small>
 				</div>
 			</Segment>
 			
